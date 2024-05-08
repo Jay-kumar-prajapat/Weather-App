@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="wraper">
+    <div class="wrapper">
    <h2>Weather App</h2>
 
    <div class="tab-container">
@@ -20,10 +24,10 @@
   <!-- Grant Access container -->
 
  
-    <div class="grant-location-container">
+    <div class="grant-location-container sub-container">
         <img src="/assets/location.png" alt="" height="80" width="80" loading="lazy">
-        <p>Grant Access</p>
-        <p>Allow Access to get weather Information</p>
+        <p class="first">Grant Access</p>
+        <p class="second">Allow Access to get weather Information</p>
         <button class="btn" data-grantAccess>Grant Access</button>
     </div>
 
@@ -31,7 +35,7 @@
     
     <form class="form-container" data-searchForm>
      <input type="text" data-searchInput placeholder="Search for City...">
-     <button class="btn" type="submit">
+     <button class="btn" id="searchbtn" type="submit">
         <img src="/assets/search.png" height="20" width="20" loading="lazy" alt="">
      </button>
 
@@ -48,14 +52,14 @@
 
    <div class="user-info-container">
     <div class="name">
-        <p data-cityName></p>
-        <img data-countryIcon>
+        <p data-cityName id="city"></p>
+        <img src="" id="countryicon" data-countryIcon>
     </div>
-    <p data-weatherDesc></p>
+    <p data-weatherDesc id="weatherdecs"></p>
 
-    <img data-weatherIcon>
+    <img src="" data-weatherIcon class="weathericon">
 
-    <p data-temp></p>
+    <p data-temp class="temp"></p>
 
     <!-- card container    -->
 
@@ -96,6 +100,6 @@
 
     </div>
 
-    <script src="main.js"></script>
+    <script src="main.js""></script>
 </body>
 </html>
